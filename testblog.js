@@ -1,11 +1,11 @@
 const webdriver = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
+const chrome = require("selenium-webdriver/firefox");
 const { By } = require("selenium-webdriver");
 
 const test = async () => {
   const driver = await new webdriver.Builder()
-    .forBrowser("chrome")
-    .setChromeOptions(new chrome.Options().headless())
+    .forBrowser("firefox")
+    .setFirefoxOptions(new firefox.Options().headless())
     .build();
 
   await driver.get("http://ec2-52-87-152-144.compute-1.amazonaws.com");

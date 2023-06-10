@@ -16,11 +16,11 @@ app.use("/images", express.static(path.join(__dirname, "/images")));
 const cors = require("cors");
 app.use(
   cors({
-    origin: "http://ec2-18-234-241-98.compute-1.amazonaws.com",
+    origin: "http://ec2-52-87-152-144.compute-1.amazonaws.com",
   })
 );
 
-const connection = mongoose.connect(process.env.MONGO_URL, {
+const connection =  mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
